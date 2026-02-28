@@ -60,3 +60,25 @@ Example JSON I mostly use
 
 ```
 
+Here are the key differences between CommonJS and ES modules:
+
+Import/Export Syntax
+CommonJS (original files):
+
+```javascript
+
+const jsonServer = require('json-server');
+const middlewares = require('./middlewares');
+module.exports = (req, res, next) => { ... };
+
+```
+
+ES Modules (new .mjs files):
+
+```javascript
+
+import jsonServer from 'json-server';
+import middlewares from './middlewares.mjs';
+export default (req, res, next) => { ... };
+
+```
